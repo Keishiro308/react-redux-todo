@@ -12,7 +12,6 @@ const ROOT_URL = 'https://todo-sample-1.herokuapp.com/api/v1'
 export const readTasks = () => async dispatch =>{
   const response = await axios.get(`${ROOT_URL}/task`)
   dispatch({type: READ_TASKS, response})
-  console.log(response.data.data)
 }
 
 export const postTask = values => async dispatch =>{
